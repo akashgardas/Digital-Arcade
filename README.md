@@ -30,8 +30,8 @@ Welcome to **Digital Arcade**, a dynamic gaming portal designed to bring multipl
 
 ## Team Members
 - Akash Gardas
-- Shail
-- BalaKrishna
+- Shaik Safiullah Sahil Hussain
+- BalaKrishna 
 
 ## Development Roadmap
 ### Phase 1: Planning and Design
