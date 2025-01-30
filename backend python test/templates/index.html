@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python with Frontend</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+    </style>
+</head>
+<body>
+    <h1>Python with Frontend Example</h1>
+    <input type="text" id="userInput" placeholder="Enter your name">
+    <button onclick="sendData()">Submit</button>
+    <p id="response"></p>
+
+    <script>
+        async function sendData() {
+            const userInput = document.getElementById('userInput').value;
+            const response = await fetch('/process', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ user_input: userInput })
+            });
+            const result = await response.json();
+            document.getElementById('response').textContent = result.response;
+        }
+    </script>
+</body>
+</html>
