@@ -5,8 +5,13 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Games from './pages/Games';
 import About from './pages/About';
-import Contact from './pages/Contact';
 import Scene from './components/Scene';
+import TicTacToe from './games/TicTacToe';
+import Snake from './games/Snake';
+import MemoryGame from './games/MemoryGame';
+import NumberGuess from './games/NumberGuess';
+import SpotDifference from './games/SpotDifference';
+import Minesweeper from './games/Minesweeper';
 
 function App() {
   return (
@@ -36,6 +41,12 @@ function App() {
                 <Games />
               </motion.div>
             } />
+            <Route path="/games/tictactoe" element={<TicTacToe />} />
+            <Route path="/games/snake" element={<Snake />} />
+            <Route path="/games/memory" element={<MemoryGame />} />
+            <Route path="/games/number-guess" element={<NumberGuess />} />
+            <Route path="/games/spot-difference" element={<SpotDifference />} />
+            <Route path="/games/minesweeper" element={<Minesweeper />} />
             <Route path="/about" element={
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
@@ -44,16 +55,6 @@ function App() {
                 transition={{ duration: 0.5 }}
               >
                 <About />
-              </motion.div>
-            } />
-            <Route path="/contact" element={
-              <motion.div
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 20 }}
-                transition={{ duration: 0.5 }}
-              >
-                <Contact />
               </motion.div>
             } />
           </Routes>

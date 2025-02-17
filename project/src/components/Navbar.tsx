@@ -1,5 +1,5 @@
 import React from 'react';
-import { TowerControl as GameController, Home, Users, MessageSquare } from 'lucide-react';
+import { TowerControl as GameController, Home, Users } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
 export default function Navbar() {
@@ -22,8 +22,7 @@ export default function Navbar() {
             {[
               { path: '/', icon: Home, label: 'Home' },
               { path: '/games', icon: GameController, label: 'Games' },
-              { path: '/about', icon: Users, label: 'About' },
-              { path: '/contact', icon: MessageSquare, label: 'Contact' },
+              { path: '/about', icon: Users, label: 'About' }
             ].map(({ path, icon: Icon, label }) => (
               <Link
                 key={path}
